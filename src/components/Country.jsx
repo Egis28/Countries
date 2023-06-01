@@ -5,10 +5,13 @@ import Card from 'react-bootstrap/Card';
 const Country = ({allCountries}) => {
     console.log(allCountries)
   return (
-<Card style={{ width: '18rem' }}>
+    <div>   
+        {allCountries !== undefined && allCountries.length !==0 ?
+        allCountries.map((country, index) => (
+<Card style={{ width: '18rem' }} key={index}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Country.name.common</Card.Title>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
@@ -17,7 +20,15 @@ const Country = ({allCountries}) => {
       </Card.Body>
     </Card>
 
-  )
-}
+  ))
 
+: <h1>duomenys nerasti</h1>
+
+ 
+   }
+
+</div>
+  )
+}   
 export default Country
+ 
