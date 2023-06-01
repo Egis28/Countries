@@ -8,7 +8,7 @@ const Main = () => {
     const getData = () => {
         //gauti duomenis is services aprasyto axios metodo
             getAllCountriesInfo()
-              .then(response => setCountries(response.data))
+              .then(response => setCountries(response))
 
     }
 
